@@ -5,14 +5,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
 import { getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD71_AmFU2k0N9BfIxm1H4dOZrs0rAx-V0",
-    authDomain: "first-aid-ai.firebaseapp.com",
-    projectId: "first-aid-ai",
-    storageBucket: "first-aid-ai.appspot.com",
-    messagingSenderId: "666576725906",
-    appId: "1:666576725906:web:c3b361c2d9f832c248434b",
-    measurementId: "G-XT5F9C8GX3",
-    databaseURL: "https://first-aid-ai-default-rtdb.europe-west1.firebasedatabase.app"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: "",
+    databaseURL: ""
 };
 
 const app = initializeApp(firebaseConfig);
