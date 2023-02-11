@@ -1,4 +1,4 @@
-API_URL = "https://serverfirstaid.pythonanywhere.com"
+API_URL = ""
 
 async function hearthAttack(type, conj, essere) {
     console.log(type)
