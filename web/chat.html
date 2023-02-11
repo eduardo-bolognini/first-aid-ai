@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="static/auth.js"></script>
+    <script>is_login()</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top">
+        <a class="navbar-brand" href="#"><span class="emoji">🧠</span>First AID AI<span class="emoji">🫀</span></a>
+        <ul class="nav navbar-nav">
+            <li><a href="/logout.html">Logout</a></li>
+            <li><a href="/createInviteLink.html">Crea un link di invito!</a></li>
+        </ul>
+    </nav>
+      
+    <div class="container">
+        <div class="account-section">
+            <!-- <iframe class="iframe" src="/session/getAll?key={{session}}"></iframe>
+            <iframe class="iframe_2" src="/key?key={{nav[4]}}"></iframe> -->
+            <h1 style="text-align: center;">Invia un feedback!</h1>
+            <form action="feedback.php">
+                <textarea name="feedback" style="width: 60%; margin: 0px 20%; height: 200px " required></textarea>
+                <button style="width: 60.5%; margin: 0px 20%; height: 30px">Invia</button>
+            </form>
+        </div>
+        <div class="chat-section" id="chat">
+            <div class="messages" id="messages">
+            </div>
+            <div class="inputs-box">
+                <input id="question" placeholder="Scrivi qua!"> 
+                <button id="done">Done</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="static/AI.js"></script>
+    <script src="static/database.js" type="module"></script>
+    <script>
+        element = document.getElementById("chat")
+        element.scrollTo(0, element.scrollHeight)
+    </script>
+  </body>
+</html>

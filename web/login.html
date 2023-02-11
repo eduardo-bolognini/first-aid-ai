@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>  </body>
+  </head>
+  <body id="body-login">
+      <div class="login">
+        <div class="login-content">
+          <h2>Login</h2>
+          <p class="error" id="error"></p>
+          <input type="email" id="email" required placeholder="email" style="margin-bottom: 10px;">
+          <input type="password" id="password" required placeholder="password">
+          <p><a href="/reimposta-password.html">Password dimenticata?</a>
+          <a href="/sing-up.php" style="margin-left: 115px;">Sing Up</a></p>
+          <button type="submit" onclick="login()" class="login-buttons login-button">Login</button>
+          <button id="google-signup-button" class="login-buttons" onclick="google()"><img src="static/google_logo.png">Login with Google</button>
+          <button id="github-signup-button" class="login-buttons" onclick="github()"><img src="static/github_logo.png">Login with GitHub</button>
+        </div>
+      </div>
+      <script src="static/auth.js"></script>
+      <script>
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                login()
+            }
+        });
+        is_login(function() {location.href = "/chat.html"}, red = false)
+      </script>
+</html>

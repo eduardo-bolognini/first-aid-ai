@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ambulance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h2>Ambulance:</h2>
+    {% if ambulance == [] %}
+      <p>Non hai ancora mandato nessuna ambulanza</p>
+    {% endif %}
+    {% for x, y in ambulance %}
+        {% if y != False %}
+            <p><b>Ambulance n°{{x}}</b>: {{y}}</p>
+        {% endif %}
+    {% endfor %}
+  </body>
+</html>

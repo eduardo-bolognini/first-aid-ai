@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Session</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    {% if dt != [] %}
+      <h2>Input: </h2>
+    {% endif %}
+    <div class="input">
+      {% for i, x in dt_n %}
+        {% if gets[i] != "None" %}
+          <p>Type: <b>{{x}}</b> | Input: <b>{{gets[i]}}</b> | Output: <b>{{dt[x]}}</b> </p>
+          <p>
+            <button class="correct" onclick='update_2("{{x}}", "{{gets[i]}}", "{{dt[x]}}")'>Correct</button>
+            <input id='{}' placeholder='correct intent'></input>
+            <button class="update" onclick='update("{}", "{}")'>Update</button>
+          </p>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if infos != [] %}
+      <h2>Info: </h2>
+    {% endif %}
+    {% for x, y in infos%}
+          <p><span class='{% if "error" in x %}error{% endif %}'><b>{{x}}</b>:</span> {{y}}</p>
+    {% endfor %}
+    <script>
+      function update(id, sentence){
+          intent = document.getElementById(id).value
+          url = "http://"+location.host+"/update?question="+id+"&sentence="+sentence+"&intent="+intent
+          var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+          };
+          fetch(url, requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+      } 
+      function update_2(id, sentence, intent){
+          url = "http://"+location.host+"/update?question="+id+"&sentence="+sentence+"&intent="+intent
+          var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+          };
+          fetch(url, requestOptions)
+              .then(response => response.text())
+              .then(result => console.log(result))
+              .catch(error => console.log('error', error));
+      } 
+      </script>
+  </body>
+</html>

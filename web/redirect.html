@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reindirizzamento...</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="static/auth.js"></script>
+    <script>console.log(is_login())</script>
+  </head>
+  <body>
+    <div class="box red">
+      <div class="element">
+        <h1>Ti stiamo reindirizzando alla chat...</h1>
+      </div>
+    </div>
+    <script>
+      setTimeout(function(){
+        location.href='/chat.html'
+      }, 1000);
+      
+    </script>
+  </body>
+</html>

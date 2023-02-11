@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+h1 {
+    font-family: 'lato';
+    font-weight: 900;
+}
+
+body {font-family: 'lato';}
+
+.box {
+    background-color: #ECE8DD;
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -35%;    
+    border: 6px solid #0E5E6F;
+    
+}
+
+.red {border: 6px solid #fff; animation: animateBorder 1.5s linear infinite;}
+
+@keyframes animateBorder
+{
+    0% {
+        border-color: #fff;
+    }
+    50% {
+        border-color: #0E5E6F;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+.element {
+    width: 700px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -45px;
+    margin-left: -350px;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+html, body {height: 100%; overflow-y: hidden; overflow-x: hidden;}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0
+}
+
+.account-section {
+    width: 75%;
+    background-color: #ECE8DD;
+    padding: 20px;
+    z-index: 20;
+    /* display: inline-flex; */
+}
+
+.chat-section {
+    width: 25%;
+    padding: 20px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+#chat input {
+    height: 40px;
+    border-radius: 0px;
+    border: 2px solid #0E5E6F;
+    padding: 5px;
+    width: 250px
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+#chat .messages {
+    width: calc(100% - 20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    padding-bottom: 150px
+}
+
+#chat .message {
+    margin-top: 10px;
+    height: 60px;
+    background: #eee;
+    width: 90%;
+    border-radius: 5px;
+    display: table;
+}
+
+#chat .scrivendo {
+    font-style: 'italic';
+    font-weight: 300;
+    font-size: 15px;
+    float: left;
+    animation: scrivendo 1.5s linear infinite;
+}
+
+@keyframes scrivendo {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+#chat .from {float:left}
+#chat .to {float: right;}
+
+#chat .message p {
+    padding-left: 8px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+#chat button, .account-section button {    
+    height: 54px;
+    width: 50px;
+    border-radius: 0px;
+    border: none;
+    background-color: #0E5E6F;
+    color: #fff
+}
+
+#chat .inputs-box {
+    position: fixed;
+    width: calc(100% - 71% - 3%);
+    top: calc(100% - 80px);
+    background: #fff;
+    /* left: 71%;
+    padding-left: 3%; */
+    height: 200px;
+    padding-top: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+#chat .finish {
+	text-align: center;
+	height: 10px;
+	width: calc(100% - 5px);
+	padding: 5px;
+	background: #fff;
+	padding-top: 20px;
+	color: #DC0000;
+}
+/* Imposta il colore di sfondo della navbar */
+.navbar {
+    background-color: #0E5E6F;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 50px;
+    justify-content: center;
+}
+
+.navbar-brand{
+    position: absolute;
+    top: 25%;
+    left: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar .navbar-nav > li > a {
+    color: #fff;
+    padding: 50px;
+    text-decoration: none;
+}
+.navbar-nav li {
+    list-style-type: none;
+    color: #fff;
+    padding-right: 10px;
+}
+iframe {
+    height: calc(100% - 60px);
+    width: 60%;
+    border: none;
+}
+
+.iframe_2 {
+    width: 40% !important;
+}
+
+.navbar .navbar-nav > li > a.active,
+.navbar .navbar-nav > li > a:hover {
+    color: #ECE8DD;
+}
+
+.navbar .navbar-nav {
+    float: right;
+}
+
+.nav {display: inline-flex;}
+.emoji {font-family: 'Noto Color Emoji';}
+
+.error {color: #DC0000;}
+
+.input .correct {
+    background: #B3FFAE;
+    border: 2px solid #B6E2A1;
+    border-radius: 3px;
+}
+
+.input .update {
+    border-radius: 3px;
+    border: 1px solid #B2B2B2;
+    background: #EAEAEA;
+}
+
+.input .edit {
+    margin-left: 30px;
+    visibility: hidden;
+    height: 0px;
+}
+
+.input input {
+    border: 1px solid #B2B2B2;
+    border-radius: 3px;
+}
+
+.finish-button {
+    background-color: #DC0000 !important;
+    color: #fff !important;
+    width: 99% !important;
+    height: 30px !important;
+}
+
+#body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #579BB1;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  
+  .login h2 {
+    text-align: center;
+    color:  #025672;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .login-content input[type="email"],
+  .login-content input[type="password"],
+  .login-content input[name="id"] {
+    width: 275px;
+    height: 40px;
+    border: 1px solid #579BB1;
+    border-radius: 4px;
+    padding: 0 10px;
+    color: #025672;
+  }
+
+  
+
+  
+  .login-content a {
+    font-size: 12px;
+    color: #579BB1;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+
+  
+  .login-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 295px;
+    margin-top: 20px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    transition: 0.3s ease;;
+}
+  
+  .login-buttons:hover {
+    background-color: #f6f6f6;
+  }
+  
+  .login-buttons img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+#google-signup-button {
+    border-color: #ed4537;
+    color: #ed4537;
+}
+
+.login-button:hover {
+    background-color: #025672;
+}
+
+#github-signup-button {
+    border-color: #100e0e;
+    color: #100e0e;
+}
+
+.login-button {
+    background: #579BB1;
+    color: #fff;
+    border: none;
+}
+
+.login .error {
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 12px;
+    height: auto;
+}
+
+.cover, .center {
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: #ECE8DD;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.cover-content, .center-content {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.cover-content * {
+    text-align: center;
+}
+
+.cover h1 {font-size: 75px}
+.cover-content a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background: #0E5E6F;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+}
